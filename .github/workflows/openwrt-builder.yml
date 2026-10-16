@@ -12,6 +12,9 @@
 
 name: OpenWrt Builder
 
+permissions:
+  contents: write
+
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -19,7 +22,7 @@ on:
       ssh:
         description: 'SSH connection to Actions'
         required: false
-        default: 'true'
+        default: 'false'
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
